@@ -46,6 +46,8 @@ function operacion(miFuncion,a,b){
 
 console.log("Resultado "+ resultado);
 
+
+//comentario boludo
 //EJERCICIO
 //OPCION 1
 /*function dividir(a,b){

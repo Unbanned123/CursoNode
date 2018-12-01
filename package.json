@@ -1,0 +1,26 @@
+{
+  "name": "cursonode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Unbanned123:SiberiaV2@github.com/Unbanned123/CursoNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Unbanned123/CursoNode/issues"
+  },
+  "homepage": "https://github.com/Unbanned123/CursoNode#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nunjucks": "^3.1.4",
+    "pg": "^7.7.1",
+    "sequelize": "^4.41.2",
+    "sqlite3": "^4.0.4"
+  }
+}

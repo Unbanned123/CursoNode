@@ -34,36 +34,49 @@ var multiplar = function (a,b){
     return a*b
 };
 
-console.log("la suma es "+ sumar(1,2));
-console.log("El producto es " + multiplar(3,3));
+//console.log("La suma es "+ sumar(1,2));
+//console.log("El producto es " + multiplar(3,3));
 
 function operacion(miFuncion,a,b){
 
     return miFuncion(a,b);
-}
+};
 
  var resultado = operacion(multiplar,3,7)
 
-console.log("Resultado "+ resultado);
+//console.log("Resultado "+ resultado);
 
-
-//comentario boludo
 //EJERCICIO
 //OPCION 1
-/*function dividir(a,b){
+function dividir(a,b){
     return a/b;
-};
+    };
 
-console.log ("El resultado es "+dividir(4,2));*/
+//console.log ("El resultado es "+dividir(4,2));
 
 //OPCION 2
 
-/*var dividir = function(a,b){
+var dividir = function(a,b){
     return a/b;
 };
-console.log("La division es "+dividir(6,2));*/
+
+console.log("La division es "+dividir(6,2));
+console.log("La suma es " + sumar(2,1));
 
 //OPCION 3
 
-var resultado = operacion(dividir,30,2);
+var resultado = operacion(multiplar,30,2);
 console.log("Resultado final " + resultado);
+
+
+/////////////////////////
+
+var division= function(a,b){
+    return a/b
+}
+
+var repuesta=operacion(division,9,3);
+console.log("Repuesta2 es:" + repuesta);
+
+//PARA INSTALAR LA DEPENDENCIA EXPRESS ES EN EL PROMP 'NPM INSTALL EXPRESS --SAVE'
+

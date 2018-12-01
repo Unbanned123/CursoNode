@@ -32,6 +32,8 @@ var Articulo = sequelize.define("Articulo",{
         },
     titulo:Sequelize.TEXT,
     contenido:Sequelize.TEXT,
+    fecha_cración: Sequelize.DATE,
+   // id_usuario:Sequelize.INTEGER
         },{
     tableName:"articulos" 
     // indicas cual es la tabla base asociada a este objeto

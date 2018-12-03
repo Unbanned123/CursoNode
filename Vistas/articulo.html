@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-    <meta charset="utf-8" />
-    <title>Blog</title>
-</head>
+    <head>
+        <meta charset="utf-8" />
+        <title>Articulos</title>
+    </head>
 
-<body>
-    <h1>Articulo</h1>
-    <!------- Las llaves son del nunjuks--->
-    <h2>{{articuloPrincipal.titulo}}</h2>
-    <h3>{{articuloPrincipal.contenido}}</h3>
-    
-    
-</body>
+    <body>
+        <h1>Articulo</h1>
+
+        {%if articuloPrincipal != null %}
+
+        <!------- Las llaves son del nunjuks--->
+        <h2>{{articuloPrincipal.titulo}}</h2>
+        <h3>{{articuloPrincipal.contenido}}</h3>
+        <h4>Fecha:{{articuloPrincipal.fecha_creacion}}</h4>
+        {%endif%}
+    </body>
 
 </html>
-
 

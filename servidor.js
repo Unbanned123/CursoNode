@@ -30,7 +30,7 @@ app.listen(8080);
 
 //DEFINIR RUTAS PARA MI PROYECTO
 
-app.get("/articulo" , function(req, res ){
+app.get("/articulo/:articuloId([0-9]+)" , function(req, res ){
     
 //request= REQUEST DE LA PETICION WEB
 //response= RESPONSE DE LA "  "
@@ -39,9 +39,11 @@ app.get("/articulo" , function(req, res ){
 //HACEMOS LA CONSULTA PARA BUSCAR EL PRIMER RENGLON
 //buscamos el renglon cuyo id sea 1
     
-    modelos.Articulo.findById(1).then(function(ObjArticulo){
+var articuloId = req.params.articuloId;
+
+    modelos.Articulo.findById(articuloId).then(function(ObjArticulo){
         
-    console.log("Se encontro articulo: " + ObjArticulo.titulo);
+  //  console.log("Se encontro articulo: " + ObjArticulo.titulo);
         
     res.render("articulo.html",{
         
@@ -64,8 +66,47 @@ app.get("/blog",function(req,res){
     res.render("blog.html");
 });
 
-app.get("/usuario",function(req,res){
-    res.render("usuario.html")
+    app.get("/usuario",function(req,res){
+
+    modelos.Usuario.findById(1).then(function(ObjUsuario){
+
+    console.log("Se encontro usuario: " + ObjUsuario.nombre);
+
+    res.render("usuario.html",{
+
+    usuarioPrincipal:ObjUsuario
+
+                  });
+        });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

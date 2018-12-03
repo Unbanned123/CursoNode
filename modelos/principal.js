@@ -2,7 +2,7 @@ var Sequelize = require("sequelize");
 
 //----------CONFIGURAR LA BASE DE DATOS CON SEQUELIZE
 
-var sequelize = new Sequelize("NOMBRE_BASE","usuario","Pass",{
+var sequelize = new Sequelize("NOMBRE_BASE","USUARIO","PASSWORD",{
     dialect: "sqlite",
     // Storage solo para sqllite
     storage: __dirname + "/database.db",
@@ -32,8 +32,7 @@ var Articulo = sequelize.define("Articulo",{
         },
     titulo:Sequelize.TEXT,
     contenido:Sequelize.TEXT,
-    fecha_cración: Sequelize.DATE,
-   // id_usuario:Sequelize.INTEGER
+    fecha_creacion:Sequelize.DATE
         },{
     tableName:"articulos" 
     // indicas cual es la tabla base asociada a este objeto
@@ -41,3 +40,19 @@ var Articulo = sequelize.define("Articulo",{
 
 //EXPORTA EL MODELO DE LA TABLA ARTICULO
 module.exports.Articulo = Articulo;
+
+//MAPEO DE TABLA USUARIO------------------------------------------------------------
+
+var Usuario = sequelize.define("Usuario",{
+    id:{
+        primaryKey:true,
+        type:Sequelize.INTEGER
+       },
+    nombre:Sequelize.TEXT,
+    email:Sequelize.TEXT,
+    password:Sequelize.INTEGER
+},{
+    tableName:"usuarios"
+});
+
+module.exports.Usuario = Usuario;
